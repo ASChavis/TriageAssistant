@@ -1,17 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./componets/Heading"
+import Signalment from "./componets/Signalment"
+import Vitals from "./componets/Vitals"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Triage Assistant</h1>
-          
-        <p>Version 1</p>
-
-        <a>Start</a>
-        
-      </header>
+    <div>
+    <Header />
+    <Signalment />
+    <Vitals />
     </div>
   );
 }
