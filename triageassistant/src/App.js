@@ -1,19 +1,18 @@
 import './App.css';
-import Header from "./componets/Heading"
-import Signalment from "./componets/Signalment"
-import Vitals from "./componets/Vitals"
-import Bodysystems from './componets/BodySystems';
-import Results from './componets/Results';
+import Header from "./Components/Heading"
+import Signalment from "./Components/Signalment"
+import Vitals from "./Components/Vitals"
+import Bodysystems from './Components/BodySystems';
+import Results from './Components/Results';
+import PatientForm from './Components/PatientForm';
+import PatientTable from './Components/PatientTable';
 
 
 function App() {
   return (
-    <div>
-      <Header className='App-header' />
-      <Signalment />
-      <Vitals />
-      <Bodysystems />
-      <Results />
+    <div className="appContainer">
+      <PatientForm />
+      {/* <PatientTable /> */}
     </div>
   );
 }
