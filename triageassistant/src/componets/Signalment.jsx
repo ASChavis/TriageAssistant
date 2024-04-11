@@ -7,7 +7,13 @@ function signalment () {
     <div>
         <h2>Signalment</h2>
             <p>Age:</p>
+                <p>Select DOB or Enter Age</p>
 
+                <p>INSERT CALENDAR HERE</p>
+                
+                <input placeholder='Enter Years here'/>
+                <input placeholder='Enter Months here'/>
+                <input placeholder='Enter Days here' />
             <p>Species:</p>
                 <button>Dog</button>
                 <button>Cat</button>

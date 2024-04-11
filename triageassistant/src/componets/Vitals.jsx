@@ -6,11 +6,11 @@ function vitals() {
         <div>
             <h2>Vitals</h2>
                 <p>Heart Rate: </p>
-
+                    <input placeholder='Beats per Minute' />
                 <p>Temperature: </p>
-
+                    <input placeholder='Degrees Farenheit' />
                 <p>Respiratory Rate:</p>
-
+                    <input placeholder='Breaths per Minute' />
                 <p>Repiratory Effort:</p>
                     <button>Normal</button>
                     <button>Mild</button>

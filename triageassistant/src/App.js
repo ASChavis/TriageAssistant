@@ -9,11 +9,11 @@ import Results from './componets/Results';
 function App() {
   return (
     <div>
-    <Header />
-    <Signalment />
-    <Vitals />
-    <Bodysystems />
-    <Results />
+      <Header className='App-header' />
+      <Signalment />
+      <Vitals />
+      <Bodysystems />
+      <Results />
     </div>
   );
 }
