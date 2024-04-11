@@ -1,6 +1,6 @@
 import React from 'react';
 
-function signalment () {
+function Signalment () {
 
 
     return ( 
@@ -33,4 +33,4 @@ function signalment () {
     </div> )
 }
 
-export default signalment;
+export default Signalment;

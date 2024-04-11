@@ -1,6 +1,6 @@
 import React from 'react';
 
-function vitals() {
+function Vitals() {
 
     return(
         <div>
@@ -37,4 +37,4 @@ function vitals() {
     )
 }
 
-export default vitals;
+export default Vitals;
