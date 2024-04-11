@@ -17,3 +17,20 @@
   color: #61dafb;
 }
 
+.appContainer {
+  display:flex;
+  height: 100vh;
+  width:100vw;
+}
+
+
+#patient-form {
+  display:flex;
+  flex-direction:column;
+  background-color:grey;
+}
+
+#patient-table {
+
+  background-color:rgb(109, 109, 243);
+}
