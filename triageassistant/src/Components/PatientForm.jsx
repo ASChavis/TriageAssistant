@@ -95,7 +95,8 @@ function PatientForm() {
 
   // Render the form based on the current stage
   return (
-    <div>
+    <div className="triage-form">
+      <div className="triage-form-header">Triage Assessment:</div>
       {stage === 0 && (
         <>
           {/* Demographics form fields */}
@@ -107,9 +108,40 @@ function PatientForm() {
             onChange={handleChange}
             required
           />
+          <input
+            type="number"
+            name="age"
+            placeholder="Age"
+            value={patient.age}
+            onChange={handleChange}
+            required
+          />
+
+          <select
+            name="species"
+            value={patient.species}
+            onChange={handleChange}
+            required
+            >
+            <option value="" disabled>Species</option>
+            <option value="Cat">Cat</option>
+            <option value="Tabby Cat">Tabby Cat</option>
+          </select>
+
+          <select
+            name="fixed"
+            value={patient.fixed}
+            onChange={handleChange}
+            required
+            >
+            <option value="" disabled>Is the patient fixed?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          
           {/* ... other demographic fields ... */}
           <button type="button" onClick={() => advanceStage()}>
-            Next to Questions
+            Begin Triage
           </button>
         </>
       )}
