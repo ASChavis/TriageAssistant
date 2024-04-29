@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-// Define your triage questions somewhere in your code
+
 const triageQuestions = [
   {
     id: 1,
-    text: "Level of Consciousness?",
+    text: "Level of Consciousness?", 
     answers: {
         Alert: { label: "Alert", points: 0},
         Lethargic: { label: "Lethargic", points: 10},
@@ -39,33 +39,33 @@ const triageQuestions = [
 }
 ];
 
-const criticalScoreThreshold = 20; // Define what you consider a critical score
+const criticalScoreThreshold = 20; 
 
 function PatientForm() {
   const [patient, setPatient] = useState({
     name: '', 
     age: '', 
     species: '',
+        //Add Gender
     fixed: '',
     triageQuestions: {},
     triageScore: 0
   });
-  const [stage, setStage] = useState(0); // Track the current stage of the form
+  const [stage, setStage] = useState(0); 
 
-  // Handle changes for the demographic fields
+  
   const handleChange = (e) => {
     setPatient({ ...patient, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
+  
   const handleSubmit = () => {
     const existingPatients = JSON.parse(localStorage.getItem('patients')) || [];
     localStorage.setItem('patients', JSON.stringify([...existingPatients, patient]));
     alert('Patient added successfully!');
-    // Optionally, reset the form or redirect the user
   };
 
-  // Function to handle question responses and calculate score
+ 
   const handleQuestionResponse = (questionId, answer) => {
     const question = triageQuestions.find(q => q.id === questionId);
     const answerPoints = question.answers[answer].points;
@@ -76,24 +76,21 @@ function PatientForm() {
     }));
   };
 
-  // Function to advance to the next stage
+  
   const advanceStage = () => {
     if (stage === 0) {
-      setStage(1); // Move to questions after demographics
+      setStage(1); 
     } else if (stage === 1) {
-      // Check the score and decide whether to advance or alert critical
       if (patient.triageScore >= criticalScoreThreshold) {
         // Critical alert
         alert('Critical condition! Send the patient back immediately.');
-        // Here you should handle critical condition, e.g., redirect or clear form
-        // redirectToCriticalPage(); or setStage(3); for a different view component
       } else {
-        handleSubmit(); // Save the patient as their condition is not critical
+        handleSubmit(); 
       }
     }
   };
 
-  // Render the form based on the current stage
+
   return (
     <div className="triage-form">
       <div className="triage-form-header">Triage Assessment:</div>
