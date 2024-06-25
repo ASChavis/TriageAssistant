@@ -7,7 +7,7 @@ function PatientTable() {
     useEffect(() => {
         const loadedPatients = JSON.parse(localStorage.getItem('patients')) || [];
         setPatients(loadedPatients);
-        // Set headers based on the keys of the first patient (assuming all patients have similar keys)
+        
         if (loadedPatients.length > 0) {
             setHeaders(Object.keys(loadedPatients[0]));
         }
